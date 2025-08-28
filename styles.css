@@ -1,0 +1,26 @@
+/* Navbar con gradiente */
+.navbar-gradient {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+}
+
+/* Efecto hover en los links del navbar */
+.navbar-gradient .nav-link {
+  color: #f8f9fa !important; /* Blanco por defecto */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-gradient .nav-link:hover {
+  color: #ffdd57 !important; /* Amarillo en hover */
+  transform: scale(1.05);
+}
+
+/* Opcional: estilo más suave al brand */
+.navbar-gradient .navbar-brand {
+  font-weight: bold;
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-gradient .navbar-brand:hover {
+  color: #ffdd57 !important;
+}
