@@ -6,29 +6,59 @@
   <title>Frameworks soportados por Vercel</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
       background-color: #f8f9fa;
     }
     .card {
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
     .section-title {
       border-left: 5px solid #0d6efd;
-      padding-left: 10px;
-      margin-bottom: 20px;
+      padding-left: 12px;
+      margin-bottom: 24px;
+      font-weight: 600;
     }
     .navbar-gradient {
       background: linear-gradient(90deg, #0d6efd, #6610f2);
     }
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: #fff;
+      padding: 10px 10px;  
+      border-radius: 0 0 16px 16px;
+      text-align: center;
+      margin-bottom: 40px; 
+    }
+
+    .hero h1 {
+      font-size: 2rem;     
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1rem;      
+      opacity: 0.9;
+      max-width: 700px;     
+      margin: 0 auto;
+    }
+
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-gradient">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Vercel Frameworks</a>
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-lightning-charge-fill me-2"></i>Vercel Frameworks</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,32 +67,49 @@
           <li class="nav-item"><a class="nav-link" href="#fullstack">Full-stack</a></li>
           <li class="nav-item"><a class="nav-link" href="#frontend">Frontends</a></li>
           <li class="nav-item"><a class="nav-link" href="#backend">Backends</a></li>
-          <li class="nav-item"><a class="nav-link" href="#monorepo">Monorepos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cli">CLI</a></li>
           <li class="nav-item"><a class="nav-link" href="#otros">Más Frameworks</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Frameworks soportados por Vercel ✨</h1>
+  </section>
+
   <!-- Contenido principal -->
-  <div class="container my-5">
-    <h1 class="text-center mb-4">Frameworks soportados por Vercel ✨</h1>
+  <div class="container">
 
     <!-- Full-stack -->
     <section id="fullstack" class="mb-5">
       <h2 class="section-title">Frameworks Full-stack</h2>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title text-primary">Principales soportados</h5>
-              <p class="card-text">Vercel soporta frameworks modernos de lado servidor y cliente para aplicaciones completas.</p>
+              <h5 class="card-title text-primary"><i class="bi bi-box-seam me-2"></i>Principales soportados</h5>
               <ul>
                 <li>Next.js</li>
                 <li>SvelteKit</li>
                 <li>Nuxt</li>
                 <li>Remix</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary"><i class="bi bi-stars me-2"></i>Beneficios al desplegar</h5>
+              <ul>
+                <li><strong>Functions:</strong> escalan según la demanda.</li>
+                <li><strong>Middleware:</strong> personalización previa al caché.</li>
+                <li><strong>Multi-runtime:</strong> distintos entornos disponibles.</li>
+                <li><strong>ISR:</strong> contenido dinámico sin redeploy.</li>
+                <li><strong>Speed Insights:</strong> métricas de rendimiento.</li>
+                <li><strong>Analytics:</strong> tráfico y audiencia.</li>
+                <li><strong>Skew Protection:</strong> evita errores de versiones.</li>
               </ul>
             </div>
           </div>
@@ -74,16 +121,28 @@
     <section id="frontend" class="mb-5">
       <h2 class="section-title">Frameworks de Frontend</h2>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title text-success">Populares</h5>
-              <p class="card-text">Frameworks para generación de sitios estáticos y aplicaciones SPA.</p>
+              <h5 class="card-title text-success"><i class="bi bi-window-sidebar me-2"></i>Populares</h5>
               <ul>
                 <li>Astro</li>
                 <li>Vite</li>
-                <li>Gatsby</li>
-                <li>Create React App</li>
+                <li>Angular</li>
+                <li>Ember.js</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success"><i class="bi bi-plus-circle me-2"></i>Adicionales</h5>
+              <ul>
+                <li>React Router</li>
+                <li>VuePress</li>
+                <li>Docusaurus</li>
+                <li>Hugo, Jekyll y Eleventy</li>
               </ul>
             </div>
           </div>
@@ -93,18 +152,32 @@
 
     <!-- Backends -->
     <section id="backend" class="mb-5">
-      <h2 class="section-title">Backends y Runtimes</h2>
+      <h2 class="section-title">Backends en Vercel</h2>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title text-danger">Lenguajes soportados</h5>
-              <p class="card-text">Funciones serverless y runtimes de Edge para APIs y lógica de servidor.</p>
+              <h5 class="card-title text-danger"><i class="bi bi-cpu me-2"></i>Beneficios principales</h5>
               <ul>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>Go</li>
-                <li>WebAssembly (Wasm)</li>
+                <li>Escalamiento automático</li>
+                <li>Pago por uso (CPU)</li>
+                <li>Reversiones instantáneas</li>
+                <li>Cortafuegos avanzado</li>
+                <li>Protección en entornos previos</li>
+                <li>Lanzamientos continuos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-danger"><i class="bi bi-diagram-3 me-2"></i>Frameworks backend</h5>
+              <ul>
+                <li>Nitro</li>
+                <li>Express</li>
+                <li>Hono</li>
+                <li>NestJS</li>
               </ul>
             </div>
           </div>
@@ -112,31 +185,47 @@
       </div>
     </section>
 
-    <!-- Más Frameworks -->
+    <!-- Otros Frameworks -->
     <section id="otros" class="mb-5">
-      <h2 class="section-title">Más Frameworks soportados</h2>
+      <h2 class="section-title">Más Frameworks</h2>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title text-warning">Ejemplos adicionales</h5>
-              <p class="card-text">Además de los principales, Vercel soporta muchos más frameworks y generadores de sitios.</p>
+              <h5 class="card-title text-secondary"><i class="bi bi-layout-text-window-reverse me-2"></i>Frontends extra</h5>
               <ul>
-                <li>Hexo</li>
-                <li>Hugo</li>
+                <li>React Router</li>
                 <li>VuePress</li>
-                <li>Eleventy (11ty)</li>
                 <li>Docusaurus</li>
-                <li>Preact</li>
-                <li>Ember.js</li>
-                <li>Sanity</li>
+                <li>Hugo, Jekyll, Eleventy</li>
               </ul>
-              <p class="mt-2">Consulta la lista completa en la <a href="https://vercel.com/docs/frameworks/more-frameworks" target="_blank">documentación oficial</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-secondary"><i class="bi bi-diagram-2 me-2"></i>Backends</h5>
+              <ul>
+                <li>Nitro</li>
+                <li>Express</li>
+                <li>Hono</li>
+                <li>NestJS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-secondary"><i class="bi bi-gear me-2"></i>Soporte flexible</h5>
+              <p class="card-text">Configura cualquier framework con <code>vercel.json</code>, ideal para proyectos experimentales.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
   </div>
 
   <!-- Bootstrap JS -->
